@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  background-image: url("../imgs/background.jpg");
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+  outline: none;
+}
+
+.overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background-color: rgba(13, 17, 21, 0.7);
+  z-index: 1;
+}
+
+h3 {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  font-size: 40px;
+  color: #fff;
+  margin: 0 0 30px;
+  font-weight: lighter;
+}
+
+.search-bar {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 150px;
+}
+.search-bar input:first-child {
+  border-radius: 40px;
+  border: none;
+  height: 40px;
+  font-size: 15px;
+  font-weight: lighter;
+  line-height: 40px;
+  padding: 14px;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  color: #fafafa;
+  letter-spacing: 0.9px;
+  width: 220px;
+  transition: width 0.25s;
+}
+.search-bar input:first-child:focus {
+  border: 2px solid royalblue;
+  width: 270px;
+  transition: width 0.25s;
+}
+.search-bar input:first-child::-moz-placeholder {
+  color: #fafafa;
+  -moz-transition: 0.12s;
+  transition: 0.12s;
+}
+.search-bar input:first-child:-ms-input-placeholder {
+  color: #fafafa;
+  -ms-transition: 0.12s;
+  transition: 0.12s;
+}
+.search-bar input:first-child::placeholder {
+  color: #fafafa;
+  transition: 0.12s;
+}
+.search-bar input:first-child:focus::-moz-placeholder {
+  color: transparent;
+}
+.search-bar input:first-child:focus:-ms-input-placeholder {
+  color: transparent;
+}
+.search-bar input:first-child:focus::placeholder {
+  color: transparent;
+}
+.search-bar button {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  right: 10px;
+  top: 7px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  cursor: pointer;
+}
+.search-bar button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.search-bar button:before {
+  content: "\f002";
+  font-family: "FontAwesome";
+  color: #fff;
+}/*# sourceMappingURL=main.css.map */
