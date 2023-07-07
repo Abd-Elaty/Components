@@ -1,0 +1,143 @@
+::selection {
+  background-color: transparent;
+}
+body {
+  height: 80vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #e7e7e7;
+}
+ul {
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+/* start menu heading  */
+.menu-head {
+  width: 300px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-size: 26px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  background-color: #fff;
+  justify-content: space-between;
+  margin-left: 12px;
+  margin-right: 12px;
+  color: #222;
+  margin-top: 150px;
+}
+/* end menu heading  */
+/* start menu icon */
+.menu-icon {
+  width: 30px;
+  height: 26px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-icon span {
+  background-color: #222;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  left: 0;
+  transition: all 0.3s;
+  top: 0;
+}
+.menu-icon span:nth-child(2) {
+  top: 11px;
+}
+.menu-icon span:nth-child(3) {
+  top: 22px;
+}
+.menu-icon span:nth-child(2).active {
+  opacity: 0;
+}
+.menu-icon span:nth-child(1).active {
+  top: 11px;
+  transform: rotate(45deg);
+  background-color: #222;
+}
+.menu-icon span:nth-child(3).active {
+  top: 11px;
+  transform: rotate(-45deg);
+  background-color: #222;
+}
+/* end menu icon */
+/* start menu content */
+.menu-content {
+  height: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 300px;
+  max-width: 100%;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  background-color: #fff;
+  margin-left: 12px;
+  margin-right: 12px;
+  color: #444;
+  position: relative;
+  transition: all 0.15s;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.menu-content.active {
+  height: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.menu-content.active li {
+  display: block;
+}
+.menu-content li {
+  display: none;
+}
+.menu-content::before,
+.menu-content.active::before{
+  content: '';
+  position: absolute;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+  right: 25px;
+  top: -20px;
+  transition: all 0.3s;
+}
+.menu-content::before{
+  opacity: 0;
+  top: 0;
+}
+.menu-content.active::before{
+  opacity: 1;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  padding: 6px;
+  transition: .2s;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+a:hover {
+  background-color: #eee;
+}
+a i {
+  margin-right: 5px;
+  font-size: 16px;
+}
+ul li:last-child a i {
+  color:rgb(247, 68, 68) ;
+}
+/* end menu content */

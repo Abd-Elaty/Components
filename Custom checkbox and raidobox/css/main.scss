@@ -1,0 +1,112 @@
+/* global */ 
+$main-color:#2196f3;
+
+::selection {
+  color: transparent;
+  color: inherit;
+}
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 80vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.right , .left {
+  margin-left: 50px;
+  min-width: 120px;
+}
+p {
+  font-size: 20px;
+}
+
+/* checkbox */ 
+.checkbox {
+  position: relative;
+  display: block;
+  height: 20px;
+  margin-bottom: 10px;
+  span {
+    position: absolute;
+    padding-left: 40px;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 20px;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #eee;
+      top: 0;
+      left: 10px;
+      border-radius: 3px;
+      font-family: FontAwesome;
+      color: #fff;
+      transition: all .15s;
+      font-size: 0px;
+    }
+  }
+  input {
+    appearance: none;
+    &:checked {
+      + span::after {
+        content: '\f00c';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #2196f3;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+/* radiobox */ 
+.radio {
+  padding-left: 10px;
+}
+.radiobox {
+  position: relative;
+  display: block;
+  height: 20px;
+  margin-bottom: 10px;
+  span {
+    position: absolute;
+    padding-left: 40px;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 20px;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #eee;
+      top: 0;
+      left: 10px;
+      border-radius: 50%;
+      font-family: FontAwesome;
+      color: #fff;
+      transition: all .25s;
+      font-size: 0px;
+    }
+  }
+  input {
+    appearance: none;
+    &:checked {
+      + span::after {
+        content: '\f111';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #2196f3;
+        font-size: 8px;
+      }
+    }
+  }
+}
